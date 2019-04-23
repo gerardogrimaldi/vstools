@@ -66,10 +66,10 @@
 
 				<p><button id="exportOBJ">Export OBJ</button></p>
 				<p><small>Exports the geometry <em>as is</em>, without skeleton and animations.</small></p>
-
-        <p>
-          <textarea id="exportJSON">Export JSON</textarea>
-        </p>
+				
+				<p><button id="exportOBJFile">Export OBJ File</button></p>
+				
+				<p><span id="exportJSON">Export JSON</span></p>
 
 			</div>
 
@@ -121,6 +121,8 @@
 		<script src="src/Text.js"></script>
 
 		<script src="src/Viewer.js"></script>
+		
+		<script src="src/FileSaver.min.js"></script>
 
 		<script>
 		var viewer = new VSTOOLS.Viewer();

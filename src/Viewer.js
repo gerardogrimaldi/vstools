@@ -86,6 +86,9 @@ VSTOOLS.Viewer = function () {
 	$sidebar.on( 'click', '#exportOBJ', exportOBJ );
 	$sidebar.on( 'click', '#exportJSON', exportJSON );
 
+	$sidebar.on( 'click', '#exportOBJFile', exportOBJFile );
+
+
 	// loading
 
 	var loaders = {};
@@ -398,6 +401,16 @@ VSTOOLS.Viewer = function () {
 			var mesh = new THREE.Mesh( snapshot, new THREE.MeshNormalMaterial() );
 			exportString( exporter.parse( mesh ) );
 
+		}
+
+	}
+
+	function exportOBJFile() {
+		var docObj = document.getElementById('exportJSON').innerText;
+
+		if ( docObj ) {
+			//var blob = new Blob([document.getElementById('exportJSON').innerText], {type: "text/plain;charset=utf-8"});
+			exportString( docObj );
 		}
 
 	}

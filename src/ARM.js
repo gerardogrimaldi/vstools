@@ -52,13 +52,10 @@ VSTOOLS.ARM.prototype.build = function () {
 
 	object.rotation.x = Math.PI;
 
-	debugger;
+  	var exporter = new THREE.OBJExporter();
 
-  var exporter = new THREE.OBJExporter();
+	var objectExportJson = object.toJSON();
 
-  var objectExportJson = object.toJSON();
-
-  document.getElementById('exportJSON').innerText = exporter.parse(object);
-  //JSON.stringify(objectExportJson);
+	document.getElementById('exportJSON').innerText = exporter.parse(object);
 
 };
